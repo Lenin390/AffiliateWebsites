@@ -1,0 +1,70 @@
+header{
+    background-image: url('../../../assets/headerimg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    margin: 2% 2%;
+    border-radius: 15%;
+}
+
+.tittle{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(253, 251, 248);
+    background-color: rgb(3, 165, 111);
+}
+header h1{
+    font-size: 35px;
+    padding: 6% 30%;
+    margin: auto;
+}
+.catageory{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.inline{
+    display: inline-flex;
+}
+.row{
+    margin: 30px 50px;
+	// padding: 0 8px;
+	// text-align: center; 
+	// box-sizing: border-box;
+    // flex-direction: row;
+    display: flex;
+  flex-wrap: wrap;
+  /* for horizontal aligning of child divs */
+  justify-content: center;
+  /* for vertical aligning */
+  align-items: center;
+}
+.row-items{
+    width: 20%;
+}
+.box{
+    border: 1px solid #053867;
+    border-radius: 2%;
+    padding: 2%;
+    margin: 5% 5%;
+    text-align: center;
+}
+.box a{
+    text-decoration: none;
+    color: #f45804;
+}
+.box:hover{
+    color: #fff;
+    background-color: #053867;
+    transition: 4 ease;
+    cursor: pointer;
+}
+.box a:hover{
+    color: rgb(95, 6, 248);
+}
+.icon{
+    height: 20px; 
+    padding-left: 2px;
+}

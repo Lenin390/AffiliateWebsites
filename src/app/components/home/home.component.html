@@ -1,0 +1,50 @@
+<header>
+    <h1>{{tittle}}</h1>
+</header>
+<!-- Catageory list -->
+<div class="catageory">
+    <div class="inline">
+        <h3>Select catageory:</h3>
+        <select (change)="onChange($event)">
+            <option *ngFor="let item of categoryList">
+                {{item | titlecase}}
+            </option>
+        </select>
+    </div>
+</div>
+
+<div *ngIf="!isFilter; then allD else filterD"></div>
+<!-- Showing All data -->
+<ng-template #allD>
+    <div class="row">
+        <div class="row-items" *ngFor="let list of AllData">
+            <div class="box">
+                <h3>{{list.name | titlecase}}</h3>
+                <p>
+                    <mat-icon class="icon">loyalty</mat-icon>{{list.category | titlecase}} | <mat-icon class="icon">
+                        supervisor_account</mat-icon>{{list.type | titlecase}}
+                </p>
+                <a href="{{list.url}}" target="_blank">visit site <mat-icon class="icon">open_in_new</mat-icon></a>
+            </div>
+
+        </div>
+    </div>
+</ng-template>
+
+
+<!-- Showing Filter data -->
+<ng-template #filterD>
+    <div class="row">
+        <div class="row-items" *ngFor="let list of filterData">
+            <div class="box">
+                <h3>{{list.name | titlecase}}</h3>
+                <p>
+                    <mat-icon class="icon">loyalty</mat-icon>{{list.category | titlecase}} | <mat-icon class="icon">
+                        supervisor_account</mat-icon>{{list.type | titlecase}}
+                </p>
+                <a href="{{list.url}}" target="_blank">visit site <mat-icon class="icon">open_in_new</mat-icon></a>
+            </div>
+
+        </div>
+    </div>
+</ng-template>
